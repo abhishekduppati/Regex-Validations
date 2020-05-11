@@ -52,8 +52,7 @@ Commas:
 	Regular Expression: /(?:^|\s)from_(.*?)(?:\s|$)/g
 	Text String:  Stay safe from_Covid-19  from_Corona  from_Virus
 
-17.
-To match specific url regex
+17. To match specific url regex
 
 Regular Expression:  /^http:\/\/test\.com\/#\/example\/(?:[a-z0-9]+-){3}(?:[a-z0-9]+)\/records$
 Test String: http://test.com/#/example/a454-rte3-445f-4543/records
