@@ -35,14 +35,23 @@ Important Regular Expressions to know:
 12.To match multiple words: ^(?!.*(hello|hola|Salve|Bonjour|Shalom))
 
 13. To match Time: Time Format HH:MM 12-hour, optional leading 0
+
                 /^(0?[1-9]|1[0-2]):[0-5][0-9]$/
+		
                    Time Format HH:MM 12-hour, optional leading 0, Meridiems (AM/PM)
+		   
                 /((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/
+		
                    Time Format HH:MM 24-hour with leading 0
+		   
                 /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/
+		
                    Time Format HH:MM 24-hour, optional leading 0
+		   
                 /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/
+		
                    Time Format HH:MM:SS 24-hour
+		   
                 /(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)/
 
 14.To match a City, example, Hyderabad from an Address line out of spaces and commas:
@@ -53,32 +62,34 @@ Important Regular Expressions to know:
      Explanation:
      
 •	To match a char except whitespace and a comma: [^\s,]
+
 •	To match 0+ chars except a comma: [^,]*
+
 •	To match a positive lookahead that requires a comma and then 0+ chars except comma ([^,]*) till the end of the string ($) : (?=,[^,]*$)
 
 15.  To select a line with 3 commas out of text document, which also includes lines with 2 & 1
 Commas: 
-	Regular Expression:  /.*,.*,.*,/g
+    Regular Expression:  /.*,.*,.*,/g
 	
-	    Text String:  lovely day, lovely day, lovely day
+    Text String:  lovely day, lovely day, lovely day
 			lovely day, lovely day, lovely day, lovely day
 			lovely day, lovely day
 
 16. To match Groups which has from_ format in Text:
 
-	Regular Expression: /(?:^|\s)from_(.*?)(?:\s|$)/g
+    Regular Expression: /(?:^|\s)from_(.*?)(?:\s|$)/g
 	
-	Text String:  Stay safe from_Covid-19  from_Corona  from_Virus
+    Text String:  Stay safe from_Covid-19  from_Corona  from_Virus
 
 17. To match specific url regex
 
-Regular Expression:  /^http:\/\/test\.com\/#\/example\/(?:[a-z0-9]+-){3}(?:[a-z0-9]+)\/records$
+    Regular Expression:  /^htt:\/\/test\.com\/#\/example\/(?:[a-z0-9]+-){3}(?:[a-z0-9]+)\/records$
 
-Test String: http://test.com/#/example/a454-rte3-445f-4543/records
+    Test String: htt://test.com/#/example/a454-rte3-445f-4543/records
 
 18. Count Vowels in a sentence
 
-Regular Expression: [aeiouAEIOU]
+    Regular Expression: [aeiouAEIOU]
 
-Test String: Abhishek
+    Test String: Abhishek
 
