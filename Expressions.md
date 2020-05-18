@@ -96,6 +96,7 @@ Commas:
 19. To neglect hyphens and select everything including dot(.)from a sentence.
 
     Regular Expression: /(\b[A-Za-z0-9À-ÖØ-öø-ÿ.]+)/g
+    
 	    Test String: abh-Abhishek                
 			Abhis-abhishek                
 			Ab.-abhishek-abhishek123  
