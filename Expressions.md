@@ -14,11 +14,11 @@ Important Regular Expressions to know:
 
 Password Strength, 
 
-	For Complex: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters)
+For Complex: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters)
     
 	Regular Expression: /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/ 
 
-        For Moderate: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8   characters)
+For Moderate: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8   characters)
     
         Regular Expression: /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/
 
@@ -36,9 +36,13 @@ Password Strength,
 
 7. To match a URL, 
 
-	   http(s) Protocol: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
+http(s) Protocol: 
 
-           Optional Protocol:  /(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ 
+	   Regular Expression: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
+
+Optional Protocol:
+
+	   Regular Expression: /(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ 
 
 8. To match an IP Address: 
 
