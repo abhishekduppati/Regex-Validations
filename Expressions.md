@@ -1,38 +1,64 @@
 Important Regular Expressions to know:
 
-1. To match duplicates in a string: /(\b\w+\b)(?=.*\b\1\b)/
+1. To match duplicates in a string: 
 
-2. To match a Username:    /^[a-z0-9_-]{3,16}$/
+	   Regular Expression: /(\b\w+\b)(?=.*\b\1\b)/
 
-3. To match a Password:    /^[a-z0-9_-]{6,18}$/
+2. To match a Username:   
 
-    Password Strength, For Complex: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters)
+	   Regular Expression: /^[a-z0-9_-]{3,16}$/
+
+3. To match a Password: 
+
+	   Regular Expression: /^[a-z0-9_-]{6,18}$/
+
+Password Strength, 
+
+	For Complex: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, 1 special character and be at least 8 characters)
     
-/(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/ 
+	Regular Expression: /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=~`|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/ 
 
-    For Moderate: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8   characters)
+        For Moderate: (Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8   characters)
     
-       /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/
+        Regular Expression: /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/
 
-4. To match an Email:      /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+4. To match an Email: 
 
-5. To match a Hex Value:   /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+	   Regular Expression: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 
-6. To match a Slug:        /^[a-z0-9-]+$/
+5. To match a Hex Value:
 
-7. To match a URL, http(s) Protocol: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
+	   Regular Expression: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
 
-                   Optional Protocol:  /(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ 
+6. To match a Slug:
 
-8. To match an IP Address: /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+	   Regular Expression: /^[a-z0-9-]+$/
 
-9. To match an HTML Tag:   /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
+7. To match a URL, 
 
-10.To match a whole text or line that does not contain a word hello:   /^(?!.*?hello).*$/  
+	   http(s) Protocol: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
 
-11.To match a line, other than those end with hello: .*(?<!\.hello)$ 
+           Optional Protocol:  /(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ 
 
-12.To match multiple words: ^(?!.*(hello|hola|Salve|Bonjour|Shalom))
+8. To match an IP Address: 
+
+	   Regular Expression: /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+
+9. To match an HTML Tag:
+
+	   Regular Expression: /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
+
+10.To match a whole text or line that does not contain a word hello:  
+
+	Regular Expression: /^(?!.*?hello).*$/  
+
+11.To match a line, other than those end with hello: 
+
+	Regular Expression: .*(?<!\.hello)$ 
+
+12.To match multiple words:
+
+	Regular Expression: ^(?!.*(hello|hola|Salve|Bonjour|Shalom))
 
 13. To match Time: Time Format HH:MM 12-hour, optional leading 0
 
@@ -58,8 +84,9 @@ Important Regular Expressions to know:
 
 	Regular Expression: /[^\s,][^,]*(?=,[^,]*$)/
 	
-	Text String: 500001 Telangana, Hyderabad, India		
-     Explanation:
+	Text String: 500001 Telangana, Hyderabad, India
+	
+   Explanation:
      
 •	To match a char except whitespace and a comma: [^\s,]
 
@@ -68,40 +95,41 @@ Important Regular Expressions to know:
 •	To match a positive lookahead that requires a comma and then 0+ chars except comma ([^,]*) till the end of the string ($) : (?=,[^,]*$)
 
 15.  To select a line with 3 commas out of text document, which also includes lines with 2 & 1
-Commas: 
-    Regular Expression:  /.*,.*,.*,/g
+Commas:
+
+    	Regular Expression:  /.*,.*,.*,/g
 	
-    Text String:  lovely day, lovely day, lovely day
-			lovely day, lovely day, lovely day, lovely day
-			lovely day, lovely day
+    	Text String:  lovely day, lovely day, lovely day
+		      lovely day, lovely day, lovely day, lovely day
+		      lovely day, lovely day
 
 16. To match Groups which has from_ format in Text:
 
-    Regular Expression: /(?:^|\s)from_(.*?)(?:\s|$)/g
-	
-    Text String:  Stay safe from_Covid-19  from_Corona  from_Virus
+    	Regular Expression: /(?:^|\s)from_(.*?)(?:\s|$)/g
+    
+    	Text String:  Stay safe from_Covid-19  from_Corona  from_Virus
 
 17. To match specific url regex
 
-    Regular Expression:  /^htt:\/\/test\.com\/#\/example\/(?:[a-z0-9]+-){3}(?:[a-z0-9]+)\/records$
+    	Regular Expression:  /^htt:\/\/test\.com\/#\/example\/(?:[a-z0-9]+-){3}(?:[a-z0-9]+)\/records$
 
-    Test String: htt://test.com/#/example/a454-rte3-445f-4543/records
+    	Test String: htt://test.com/#/example/a454-rte3-445f-4543/records
 
 18. Count Vowels in a sentence
 
-    Regular Expression: /[aeiouAEIOU]/g
+    	Regular Expression: /[aeiouAEIOU]/g
 
-    Test String: Abhishek
+    	Test String: Abhishek
     
 19. To neglect hyphens and select everything including dot(.)from a sentence.
 
-    Regular Expression: /(\b[A-Za-z0-9À-ÖØ-öø-ÿ.]+)/g
+		Regular Expression: /(\b[A-Za-z0-9À-ÖØ-öø-ÿ.]+)/g
     
-	    Test String: abh-Abhishek                
-			Abhis-abhishek                
-			Ab.-abhishek-abhishek123  
-			abhishek                     
-			regex-expre-and-expressiÖn          
-			regular-expressions                   
+	        Test String: abh-Abhishek                
+			     Abhis-abhishek                
+			     Ab.-abhishek-abhishek123  
+			     abhishek                     
+			     regex-expre-and-expressiÖn          
+			     regular-expressions                   
 
 
