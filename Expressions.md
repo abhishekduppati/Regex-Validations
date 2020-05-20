@@ -101,9 +101,9 @@ Optional Protocol:
 15.  To select a line with 3 commas out of text document, which also includes lines with 2 & 1
 Commas:
 
-    	Regular Expression:  /.*,.*,.*,/g
+    		Regular Expression:  /.*,.*,.*,/g
 	
-    	Text String:  lovely day, lovely day, lovely day
+    		Text String:  lovely day, lovely day, lovely day
 		      lovely day, lovely day, lovely day, lovely day
 		      lovely day, lovely day
 
@@ -134,6 +134,16 @@ Commas:
 			     Ab.-abhishek-abhishek123  
 			     abhishek                     
 			     regex-expre-and-expressiÖn          
-			     regular-expressions                   
+			     regular-expressions   
+			     
+20. To select everything other than double quotes in-between
+
+		Regular Expression: [^"]+		(or)
+		Regular Expression: [[{:\w\\d',\d}]+]*
+		
+		Test String: [{"id":"'1002001'","number":1}{"id":"'1002002'","number":1},{"id":"'1002003'","number":1},						      {"id":"'1002004'","number":2}]
+
+			     
+			     
 
 
