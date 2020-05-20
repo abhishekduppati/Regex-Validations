@@ -141,7 +141,7 @@ Commas:
 		Regular Expression: [^"]+		(or)
 		Regular Expression: [[{:\w\\d',\d}]+]*
 		
-		Test String: [{"id":"'1002001'","number":1}{"id":"'1002002'","number":1},{"id":"'1002003'","number":1},						      {"id":"'1002004'","number":2}]
+		Test String: [{"id":"'1002001'","number":1}{"id":"'1002002'","number":1},{"id":"'1002003'","number":1},{"id":"'1002004'","number":2}]
 
 			     
 			     
