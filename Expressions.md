@@ -143,7 +143,9 @@ Commas:
 		
 		Test String: [{"id":"'1002001'","number":1}{"id":"'1002002'","number":1},{"id":"'1002003'","number":1},{"id":"'1002004'","number":2}]
 
-			     
-			     
+21. To search multiple words ignoring case
 
+		Regular Expression: \bworld\b|\bleader\b|\bmatchwordstart|word1|matchwordend\b|\bmatchwordstart|word2|matchwordend\b|\bmatchwordstart|word3|matchwordend\b|^matchmessagestart|matchmessageend$
+			     
+		Test String: world leader
 
