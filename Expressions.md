@@ -138,8 +138,8 @@ Commas:
 			     
 20. To select everything other than double quotes in-between
 
-		Regular Expression: [^"]+		(or)
-		Regular Expression: [[{:\w\\d',\d}]+]*
+		Regular Expression: /[^"]+/		(or)
+		Regular Expression: /[[{:\w\\d',\d}]+]*/
 		
 		Test String: [{"id":"'1002001'","number":1}{"id":"'1002002'","number":1},{"id":"'1002003'","number":1},{"id":"'1002004'","number":2}]
 
@@ -148,4 +148,43 @@ Commas:
 		Regular Expression: \bworld\b|\bleader\b|\bmatchwordstart|word1|matchwordend\b|\bmatchwordstart|word2|matchwordend\b|\bmatchwordstart|word3|matchwordend\b|^matchmessagestart|matchmessageend$
 			     
 		Test String: world leader
+		
+22. User to enter Alphabets with spacing between the FirstName for example Abhijith Singh in the First Name
 
+		Regular Expression: /^[A-Z][a-z]+\s[A-Z][a-z]+$/
+		
+		Field Name: Insured FirstName
+		
+23. User to enter Alphabets and/or Special Characters along with Spacing
+
+		Regular Expression: /^[a-zA-Z0-9 !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+$/
+		
+		Field Name: Insured LastName
+		
+24. Alphanumeric/Numeric (MaxLength 12 Characters)
+
+		Regular Expression: /^([a-zA-Z0-9_-]){1,12}$/
+		
+		Field Name: Passport Number
+		
+25. Alphanumeric with Special Characters
+
+		Regular Expression: /^[ A-Za-z0-9_@./#&+-]*$/
+		
+		Field Name: Proof ID detail
+		
+26. User to Select the Date in the DD/MM/YYYY Format
+
+		Regular Expression: /(^(((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[012]))|((29|30|31)[\/](0[13578]|1[02]))|((29|30)[\/](0[4,6,9]|11)))[\/](19|[2-9][0-9])\d\d$)|(^29[\/]02[\/](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)/
+		
+		Field Name: Date of Birth
+		
+		Field Value: Date Picker
+		
+27. User to Select the Date in the DD/MM/YYYY or DD-MM-YYYY or DD.MM.YYYY Format
+
+		Regular Expression: /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/
+		
+		Field Name: Date of Birth
+		
+		Field Value: Date Picker
